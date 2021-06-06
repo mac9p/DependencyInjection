@@ -1,10 +1,8 @@
 package io.github.mac9p.dependencyinjection.controllers;
 
-import io.github.mac9p.dependencyinjection.services.GreetingServiceImpl;
+import io.github.mac9p.dependencyinjection.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
 
@@ -14,7 +12,7 @@ class PropertyInjectedControllerTest {
     void setUp(){
         controller = new PropertyInjectedController();
 
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new ConstructorGreetingService();
     }
     @Test
     void getGreeting(){
